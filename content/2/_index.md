@@ -1,5 +1,5 @@
 ---
-title : "Module-0: Environment Setup"
+title : "Environment Setup"
 date : "`r Sys.Date()`"
 weight : 2
 chapter : false
