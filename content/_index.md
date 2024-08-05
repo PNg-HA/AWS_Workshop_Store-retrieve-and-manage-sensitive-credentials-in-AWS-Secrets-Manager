@@ -32,8 +32,9 @@ You will also create an automated workflow for Detecting, Alerting and Respondin
 ### Modules
 This workshop is broken up into setup and then four modules:
 
-- [Module-0: Environment Setup](1-Instructions/)
-- [Module-1: Retrieving secrets and implementing access control for secrets stored in AWS Secrets Manager](2) 
-- [Module-2: Monitor compliance of secrets](3)
-- [Module-3: Automation of Incident Response workflows](4)
-- [Module-4: Recap and summary](5)
+- [Introduction](1-Instructions/)
+- [Module-0: Environment Setup](2/)
+- [Module-1: Retrieving secrets and implementing access control for secrets stored in AWS Secrets Manager](3) 
+- [Module-2: Monitor compliance of secrets](4)
+- [Module-3: Automation of Incident Response workflows](5)
+- [Module-4: Recap and summary](6)
