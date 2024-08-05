@@ -3,6 +3,7 @@ title : "Module-0: Environment Setup"
 date : "`r Sys.Date()`"
 weight : 2
 chapter : false
+pre : " <b> Module-0 </b> "
 ---
 
 In this module, the CloudFormation template has been deployed to create the following resources:
