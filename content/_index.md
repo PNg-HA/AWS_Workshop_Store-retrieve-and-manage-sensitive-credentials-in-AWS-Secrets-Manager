@@ -1,5 +1,5 @@
 ---
-title : "Threat Detection & Response Workshop"
+title : "Store, retrieve, and manage sensitive credentials in AWS Secrets Manager"
 date :  "`r Sys.Date()`" 
 weight : 1 
 chapter : false
