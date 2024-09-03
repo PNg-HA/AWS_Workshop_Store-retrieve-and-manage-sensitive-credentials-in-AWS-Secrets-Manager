@@ -1,8 +1,9 @@
 ---
-title : "Lưu trữ, truy xuất và quản lý thông tin xác thực nhạy cảm trong AWS Secrets Manager"
+title : "Hướng dẫn thực hiện Workshop"
 date :  "`r Sys.Date()`" 
 weight : 1 
 chapter : false
+pre : " <b> 1. </b> "
 ---
 Security Architects đang tìm cách giảm thiểu việc truy cập vào các plaintext secret bởi các nhóm phát triển ứng dụng của họ. Các nhà phát triển muốn có một cơ chế để truy xuất secret  một cách an toàn mà không cần mã hóa thông tin xác thực trực tiếp trong ứng dụng của họ. Họ cũng muốn đảm bảo rằng việc luân chuyển secret sẽ không ảnh hưởng đến tính sẵn sàng của ứng dụng. Các nhóm tuân thủ muốn có cơ chế giám sát tính bảo mật của secret và phù hợp với các biện pháp hoặc chính sách tốt nhất. Cuối cùng, SOC muốn có cơ chế phản hồi các hành động trái phép hoặc sai sót đối với các secret.
 
@@ -29,13 +30,11 @@ Bạn sẽ sử dụng secret được tạo trong AWS Secrets Manager trong ứ
 
 Bạn cũng sẽ tạo một quy trình tự động để phát hiện, cảnh báo và phản hồi đối với việc xóa chính sách secret và thay đổi trạng thái tuân thủ đối với các secret trong AWS Secrets Manager.
 
-
 ### Modules
 Buổi workshop này được chia thành phần cài đặt và bốn module:
 
-- [Introduction](1-Instructions/)
-- [Module-0: Environment Setup](2/)
-- [Module-1: Retrieving secrets and implementing access control for secrets stored in AWS Secrets Manager](3) 
-- [Module-2: Monitor compliance of secrets](4)
-- [Module-3: Automation of Incident Response workflows](5)
-- [Module-4: Recap and summary](6)
+- Module-0: Environment Setup
+- Module-1: Retrieving secrets and implementing access control for secrets stored in AWS Secrets Manager
+- Module-2: Monitor compliance of secrets
+- Module-3: Automation of Incident Response workflows
+- Module-4: Recap and summary

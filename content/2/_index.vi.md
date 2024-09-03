@@ -1,23 +1,22 @@
 ---
-title : "Các bước chuẩn bị"
-date :  "`r Sys.Date()`" 
-weight : 2 
+title : "Thiết Lập Môi Trường"
+date : "`r Sys.Date()`"
+weight : 2
 chapter : false
-pre : " <b> 2. </b> "
+pre : " <b> Module-0 </b> "
 ---
 
-{{% notice info %}}
-Bạn cần tạo sẵn 1 Linux instance thuộc public subnet và 1 Window instance thuộc private subnet để thực hiện bài thực hành này.
-{{% /notice %}}
+Trong module này, CloudFormation template đã được triển khai để tạo các tài nguyên sau:
 
-Để tìm hiểu cách tạo các EC2 instance và VPC với public/private subnet các bạn có thể tham khảo bài lab :
-  - [Giới thiệu về Amazon EC2](https://000004.awsstudygroup.com/vi/)
-  - [Làm việc với Amazon VPC](https://000003.awsstudygroup.com/vi/)
+- Cấu hình VPC cho ứng dụng mẫu
+- Customer Managed Key (CMK) trong AWS KMS thử nghiệm
+- Amazon RDS MySQL Database Instance thử nghiệm
+- Secret chứa thông tin đăng nhập cho Amazon RDS MySQL Database Instance thử nghiệm
+- Hàm Lambda cho ứng dụng mẫu
+- Các hàm Lambda để khởi tạo và nạp dữ liệu vào cơ sở dữ liệu cho ứng dụng mẫu
+- API Gateway để truy cập ứng dụng mẫu
+- Hàm Lambda luân phiên secret cho Cơ sở dữ liệu RDS MySQL
+- Hàm Lambda khắc phục sự cố cho quy trình làm việc Ứng phó sự cố
 
-Để sử dụng System Manager để quản lý window instance nói riêng và các instance nói chung của chúng ta trên AWS, ta cần phải cung cấp quyền cho các instance của chúng ta có thể làm việc với System Manager.Trong phần chuẩn bị này, chúng ta cũng sẽ tiến hành tạo IAM Role để cấp quyền cho các instance có thể làm việc với System Manager.
-
-### Nội dung
-  - [Chuẩn bị VPC và EC2 Instance](2.1-createec2/)
-  - [Tạo IAM Role](2.2-createiamrole/)
-
-  
+Sau khi hoàn thành Module này, việc triển khai sẽ bao gồm các tài nguyên sau:
+![Architecture](/images/m0/mod0-asm-archi.png)
