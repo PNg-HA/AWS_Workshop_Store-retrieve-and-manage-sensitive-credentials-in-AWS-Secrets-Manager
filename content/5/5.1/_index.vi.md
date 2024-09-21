@@ -99,6 +99,7 @@ Nó sẽ trông như thế này:
 
 
 
-17. Cuộn xuống và nhấp vào “Create rule". Khi Rule được tạo, bạn sẽ thấy một thông báo màu xanh lá cây ở đầu màn hình:
+17. Cuộn xuống và nhấp vào “Create rule".
 ![m2](/images/m3/3.1/s17.png)
+Khi Rule được tạo, bạn sẽ thấy một thông báo màu xanh lá cây ở đầu màn hình:
 ![m2](/images/m3/3.1/s17b.png)

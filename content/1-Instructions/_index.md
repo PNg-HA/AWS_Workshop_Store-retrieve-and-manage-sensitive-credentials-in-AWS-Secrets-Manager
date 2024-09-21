@@ -3,7 +3,7 @@ title : "Workshop Instructions"
 date :  "`r Sys.Date()`" 
 weight : 1 
 chapter : false
-pre : " <b> 1. </b> "
+# pre : " <b> 1. </b> "
 ---
 Security Architects are looking to reduce access to plaintext secrets by their application teams. Developers want a mechanism to securely retrieve secrets without hard-coding credentials in their application. They also want assurance that rotation of secrets will not affect application availability. Compliance teams want mechanisms to monitor security of the secrets and aligning with best practices or policy. Finally the SOC want mechanisms to respond to unauthorized or erroneous actions on secrets.
 

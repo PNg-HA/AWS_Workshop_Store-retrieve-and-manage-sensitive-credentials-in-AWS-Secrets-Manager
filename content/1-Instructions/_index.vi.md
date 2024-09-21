@@ -3,7 +3,6 @@ title : "Hướng dẫn thực hiện Workshop"
 date :  "`r Sys.Date()`" 
 weight : 1 
 chapter : false
-pre : " <b> 1. </b> "
 ---
 Security Architects đang tìm cách giảm thiểu việc truy cập vào các plaintext secret bởi các nhóm phát triển ứng dụng của họ. Các nhà phát triển muốn có một cơ chế để truy xuất secret  một cách an toàn mà không cần mã hóa thông tin xác thực trực tiếp trong ứng dụng của họ. Họ cũng muốn đảm bảo rằng việc luân chuyển secret sẽ không ảnh hưởng đến tính sẵn sàng của ứng dụng. Các nhóm tuân thủ muốn có cơ chế giám sát tính bảo mật của secret và phù hợp với các biện pháp hoặc chính sách tốt nhất. Cuối cùng, SOC muốn có cơ chế phản hồi các hành động trái phép hoặc sai sót đối với các secret.
 

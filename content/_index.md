@@ -4,6 +4,7 @@ date :  "`r Sys.Date()`"
 weight : 1 
 chapter : false
 ---
+# Store, retrieve and manage sensitive credentials in Secrets Manager
 Security Architects are looking to reduce access to plaintext secrets by their application teams. Developers want a mechanism to securely retrieve secrets without hard-coding credentials in their application. They also want assurance that rotation of secrets will not affect application availability. Compliance teams want mechanisms to monitor security of the secrets and aligning with best practices or policy. Finally the SOC want mechanisms to respond to unauthorized or erroneous actions on secrets.
 
 In this workshop, you will use a sample serverless application with AWS Lambda functions connecting to an Amazon RDS database. You will test programmatic retrieval of database credentials from AWS Secrets Manager as well as implement Attribute-based Access Control (ABAC) using tags. You will monitor compliance status of secrets using AWS Config. Later you will rotate secrets within AWS Secrets Manager and test application access. Finally you will test attempts to delete the secrets resource policy for retrieving secrets in plaintext from AWS Secrets Manager. Attendees will use AWS Event Bridge event driven response to deploy incident response workflows that will rotate the secret, restore the resource policy, alert the SOC, and deny access to the offender.
@@ -38,3 +39,7 @@ This workshop is broken up into setup and then four modules:
 - [Module-2: Monitor compliance of secrets](4)
 - [Module-3: Automation of Incident Response workflows](5)
 <!-- - [Module-4: Recap and summary](6) -->
+
+{{% notice info %}}
+This workshop is created from AWS workshop’s accounts (including setting up RDS, Lambda functions). You can do this workshop by register to AWS Activation Day “Secrets Management” at https://awsactivationdays.splashthat.com/.
+{{% /notice %}}

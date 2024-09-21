@@ -1,5 +1,5 @@
 ---
-title : "Update Sample Application"
+title : "Retrieving Secrets and Implementing Access Control for Secrets"
 date : "`r Sys.Date()`"
 weight : 3
 chapter : false

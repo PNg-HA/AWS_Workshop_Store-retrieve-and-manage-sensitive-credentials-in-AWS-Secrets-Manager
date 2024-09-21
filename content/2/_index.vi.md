@@ -3,7 +3,7 @@ title : "Thiết Lập Môi Trường"
 date : "`r Sys.Date()`"
 weight : 2
 chapter : false
-pre : " <b> Module-0 </b> "
+pre : " <b> Mô-đun 0 </b> "
 ---
 
 Trong module này, CloudFormation template đã được triển khai để tạo các tài nguyên sau:

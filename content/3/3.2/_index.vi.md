@@ -12,9 +12,9 @@ Trong phần này, bạn sẽ xem xét các policy được gắn với role c�
 #### Steps:
 1. Điều hướng đến [bảng điều khiển dịch vụ Lambda](https://console.aws.amazon.com/lambda).
 
+![1.1](/images/m1/1.1/s1.png)
 
-
-2.  Chọn “Functions” từ bảng điều khiển bên trái. Nhấp vào tên hàm “LambdaRDSTest”.
+2.  Chọn “Functions” từ bảng điều khiển bên trái. Nhấp vào tên hàm “LambdaRDSTest” (Hàm đã thao tác ở phần 1.1).
 
 
 
@@ -47,9 +47,9 @@ Xem thử Trust relationships
 
 
 A: kiểm tra xem thẻ aws:ResourceTag/Event và aws:ResourceTag/Workshop có khớp với các giá trị tương ứng trong thẻ aws:PrincipalTag/Event và aws:PrincipalTag/Workshop hay không.
-9. Bây giờ hãy xem xét các Tag cho Role này. Điều hướng đến tab “Tags”.
+<!-- 9. Bây giờ hãy xem xét các Tag cho Role này. Điều hướng đến tab “Tags”.
 
-*Bạn nhận thấy các cặp Key-Value nào của Tag?*
+*Bạn nhận thấy các cặp Key-Value nào của Tag?* -->
 
 
 

@@ -99,6 +99,7 @@ It should look like:
 
 
 
-17. Scroll down and click “Create rule". Once the Rule is created, you will see a green banner at the top of the screen:
+17. Scroll down and click “Create rule".
 ![m2](/images/m3/3.1/s17.png)
+Once the Rule is created, you will see a green banner at the top of the screen:
 ![m2](/images/m3/3.1/s17b.png)

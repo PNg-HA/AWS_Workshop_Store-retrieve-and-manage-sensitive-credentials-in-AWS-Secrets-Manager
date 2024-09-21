@@ -1,9 +1,9 @@
 ---
 title : "Kiểm tra Quy trình Tự động hóa"
 date : "`r Sys.Date()`"
-weight : 2
+weight : 5
 chapter : false
-pre : " <b> Nhiệm vụ-3.2: </b> "
+pre : " <b> Mô-đun 3: </b> "
 ---
 
 **Điều kiện tiên quyết:**:

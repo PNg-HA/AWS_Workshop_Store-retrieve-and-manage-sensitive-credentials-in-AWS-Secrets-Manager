@@ -12,9 +12,9 @@ In this section, you will review the policies attached to the sample application
 #### Steps:
 1. Navigate to the [Lambda service console](https://console.aws.amazon.com/lambda).
 
+![1.1](/images/m1/1.1/s1.png)
 
-
-2. Select “Functions” from the left panel. Click on the “LambdaRDSTest” function name.
+2. Select “Functions” from the left panel. Click on the “LambdaRDSTest” function name (Functions worked on in part 1.1).
 
 
 
@@ -48,9 +48,10 @@ Check out Trust relationships
 
 
 A: it checks if the aws:ResourceTag/Event and aws:ResourceTag/Workshop tags match the corresponding values in the aws:PrincipalTag/Event and aws:PrincipalTag/Workshop tags.
+<!-- 
 9. Now let’s review the Tags for this Role. Navigate to the “Tags” tab.
 
-*What Tag Key-Value pairs do you notice?*
+*What Tag Key-Value pairs do you notice?* -->
 
 
 
