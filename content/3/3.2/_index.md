@@ -30,7 +30,7 @@ In this section, you will review the policies attached to the sample application
 
 5. In the “Execution Role” section, you will see a Role name “LambdaRDSTestRole” that is attached to the Lambda function.
 
-
+![1.2](/images/m1/1.2/s5.png)
 
 6. Click on “LambdaRDSTestRole”. This action will take you to the Role details in the IAM Management Console.
 
@@ -39,13 +39,15 @@ In this section, you will review the policies attached to the sample application
 
 7. In the Permissions Tab, you will notice 4 policies that are attached to this Role.
 
-
+![1.2](/images/m1/1.2/s7.png)
+Check out Trust relationships
+![1.2](/images/m1/1.2/s7b.png)
 8. Click on the "+" symbol beside the “AllowSM” policy.
+![1.2](/images/m1/1.2/s8.png)
+*Q: What do you infer from the policy?*
 
-*What do you infer from the policy?*
 
-
-
+A: it checks if the aws:ResourceTag/Event and aws:ResourceTag/Workshop tags match the corresponding values in the aws:PrincipalTag/Event and aws:PrincipalTag/Workshop tags.
 9. Now let’s review the Tags for this Role. Navigate to the “Tags” tab.
 
 *What Tag Key-Value pairs do you notice?*
@@ -62,20 +64,33 @@ In this section, you will review the policies attached to the sample application
 12. Under the “Tags” section for the secret, review the Tag Values for the Tags “Event” and “Workshop” and compare the Tag Key and Tag Value for the ”LambdaRDSTestRole“ Tags that you reviewed in step # 10 above.
 
 *What do you observe?*
-
+![1.2](/images/m1/1.2/s12.png)
 
 13. Now click on “Edit tags” to edit the tags for the “DemoWorkshopSecret” secret. Update the value for the tag “Workshop” to another value (e.g. AWSKMSWorkshop).
 
+![1.2](/images/m1/1.2/s13.png)
 
 
 14. Click “Save”. You will see a green banner on the top stating “Your tags are modified."
 
+![1.2](/images/m1/1.2/s14.png)
 
 
 15. If you access the API URL again in your web browser, you will see a message “Database not connected” as an output.
+![1.2](/images/m1/1.2/s15.png)
 
 *Why did the connection fail?*
 
-
+A: It failed because of different value in Workshop tag (must be AWSSecretsManagerWorkshop)
 
 16. Experiment by updating the Tags of the secret to a combination of these values and observe the output from the application API URL.
+
+![1.2](/images/m1/1.2/s16.png)
+Changing the Workshop tag value to 'AmazonGuardDutyWorkshop' still doesn't connect.
+
+
+![1.2](/images/m1/1.2/s16b.png)
+Changing the Event value to "conference" also does not connect to the database
+
+![1.2](/images/m1/1.2/s16d.png)
+If the Workshop and Event tags have values ​​as below, the database query will be successful.

@@ -28,8 +28,8 @@ pre : " <b> Nhiệm vụ-3.2: </b> "
 4. Thử truy xuất giá trị secret.  Nhấp vào “Retrieve secret value” trong phần Secret value.
 
 
-*Bạn có thể xem giá trị secret không? Tại sao có hoặc tại sao không?*
-
+*Q: Bạn có thể xem giá trị secret không? Tại sao có hoặc tại sao không?*
+A: chính sách này từ chối bất kỳ dịch vụ hoặc thực thể AWS nào sử dụng secretsmanager:GetSecretValue trên bất kỳ tài nguyên nào trừ khi ARN của thực thể gọi khớp với một trong các ARN vai trò đã chỉ định
 
 5. Trong phần Resource Permissions, nhấp vào “Edit Permissions”. Cập nhật Policy
 
@@ -66,4 +66,13 @@ Kết quả của hành động này:
 
 3. Điều hướng đến secret “DemoWorkshopSecret” một lần nữa trong [bảng điều khiển dịch vụ Secrets Manager](https://console.aws.amazon.com/secretsmanager). 
 
-*Tại sao bạn lại thấy Resource Policy xuất hiện lại? Hãy thử xóa Resource Policy lần nữa, điều gì xảy ra?*
+.p3
+Policy trên giống policy trong lambda UpdateSecretPolicyLambdaFunction sau khi format lại:
+.p4
+*Q: Hãy thử xóa Resource Policy lần nữa, điều gì xảy ra?*\
+A: Không thể xóa (update) resource policy này, là do lambda UpdateSecretPolicyLambdaFunction được trigger, và session user này được gán role DenyUpdateSecretPolicy
+.p5
+
+Có thể check bằng Event DeleteResourcePolicy trên CloudTrail:
+.p5
+.p6

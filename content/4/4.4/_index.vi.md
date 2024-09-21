@@ -53,3 +53,19 @@ Truy cập lại API URL của ứng dụng mẫu và quan sát giá trị của
 Lưu ý rằng phiên bản AWSCURRENT sẽ trở thành phiên bản AWSPREVIOUS.
 
 Bạn cũng có thể kiểm tra ứng dụng khi secret được lên lịch để luân phiên bằng cách nhấp vào “Rotate secret immediately”. Sau đó truy cập liên kết API URL của ứng dụng sau khi bạn thấy thông báo thành công màu xanh lá cây ở đầu màn hình.
+
+Test rotate:
+.a
+Vẫn fail trong sns portal:
+.b
+debug: phát hiện chọn sai Event Type:
+.c
+Sau khi chuyển lại key thành AWSSecretsManagerWorkshopKey:
+.d
+
+Lambda này ghi log vào DynamoDB table:
+.e
+.f
+
+Truy cập lại API URL. Bây giờ phiên bản AWSCURRENT sẽ trở thành phiên bản AWSPREVIOUS:
+g

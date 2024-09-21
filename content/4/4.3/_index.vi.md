@@ -80,3 +80,11 @@ g. Chọn “Any resource ID”.
 
 
 14. Cuộn xuống và nhấp vào "Create rule". Sau khi Rule được tạo, bạn sẽ thấy một thông báo màu xanh lá cây xuất hiện ở trên cùng của màn hình.
+
+Xem lại:
+.a
+Kết quả:
+.b
+Xem EventBridge Rule: - Event partern:
+,c
+.d

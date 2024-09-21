@@ -13,27 +13,27 @@ pre : " <b> Nhiệm vụ-1.1: </b> "
 Cập nhật ứng dụng mẫu để truy xuất thông tin xác thực của cơ sở dữ liệu từ AWS Secrets Manager
 
 1. Điều hướng đến [bảng điều khiển dịch vụ Lambda](https://console.aws.amazon.com/lambda).
-
+![1.1](/images/m1/1.1/s1.png)
 2. Chọn “Functions” từ bảng điều khiển bên trái. Nhấp vào tên hàm “LambdaRDSTest”. Đây là hàm được sử dụng cho ứng dụng mẫu để kết nối với cơ sở dữ liệu RDS. Hàm này được viết bằng ngôn ngữ Python. Cơ sở dữ liệu chứa dữ liệu mẫu về Tên và Họ.
 
 3. Bạn có thể xem code của ứng dụng mẫu bằng cách nhấp đúp vào “LambdaRDSTest.py” trong phần “Code Source”.
 
-
+![1.1](/images/m1/1.1/s3a.png)
 
 Hàm openConnection() trong code kết nối với cơ sở dữ liệu MySQL RDS bằng cách sử dụng các tham số được lưu trữ trong Biến Môi Trường (Environment Variables). Khi cơ sở dữ liệu được kết nối, ứng dụng sẽ in ra dữ liệu mẫu.
-
+![1.1](/images/m1/1.1/s3b.png)
 4. Dán và truy cập API URL mà bạn đã sao chép trước đó (trong phần Event Outputs của CloudFormation stack) trên một tab trình duyệt web riêng. Bạn sẽ thấy thông báo Database not connected.
 ```
-Why wasn't the application able to connect to the RDS database for retrieving the sample data?
+Q: Tại sao ứng dụng không thể kết nối với cơ sở dữ liệu RDS để lấy dữ liệu mẫu?
 ```
-
-
+A: Do password đã dc configure để dc dùng từ Amazon Secret Manager
+![1.1](/images/m1/1.1/s4.png)
 5. Bây giờ, hãy cập nhật code hàm “LambdaRDSTest” để lấy thông tin xác thực củacơ sở dữ liệu từ Secrets Manager thay vì sử dụng Biến Môi Trường. Quay lại tab trình duyệt nơi code LambdaRDSTest.py được mở.
 
 a. Comment 4 dòng code sau (dòng số 15, 16, 17, 18) bằng cách thêm dấu # ở đầu mỗi dòng như hiển thị dưới đây.
 
 b. Dưới mục “Configuration”, nhấp vào “Environment variables”. Bạn sẽ thấy các Biến Môi Trường tương tự như dưới đây:
-
+![1.1](/images/m1/1.1/s5b.png)
 c. Xóa tất cả các cặp khóa giá trị (Key Value pairs) cho các Biến Môi Trường:
 
 6. Quay lại mã nguồn trong phần “Code Source”:
@@ -42,18 +42,20 @@ c. Xóa tất cả các cặp khóa giá trị (Key Value pairs) cho các Biến
 
 7. Nhấp vào “Deploy” để lưu các thay đổi và đợi cho đến khi xuất hiện thông báo sau:
 
-
+![1.1](/images/m1/1.1/s7.png)
 
 8. Điều hướng đến [bảng điều khiển dịch vụ Secrets Manager](https://console.aws.amazon.com/secretsmanager) .
 
-
+![1.1](/images/m1/1.1/s8.png)
 
 9. Nhấp vào secret được tạo bởi CloudFormation template. Tên của secret sẽ là “DemoWorkshopSecret“.
-
+![1.1](/images/m1/1.1/s9.png)
+![1.1](/images/m1/1.1/s9b.png)
 
 
 10. Cuộn xuống phần “Sample code”. Nhấp vào “Python3”.
 
+![1.1](/images/m1/1.1/s10.png)
 
 
 11. Chọn và sao chép code từ dòng #11 đến dòng #34.
@@ -89,7 +91,7 @@ db_name =  secretstring['dbname']
 16. Xác minh rằng code đã sửa đổi giống với:
 
 Tại thời điểm này, ứng dụng đã được cấu hình để thực hiện kết nối cơ sở dữ liệu bằng cách sử dụng thông tin xác thực được truy xuất từ secret trong AWS Secrets Manager. Lệnh pymysql.connect sử dụng thông tin xác thực được truy xuất từ secret.
-
+![1.1](/images/m1/1.1/s16.png)
 
 17. Nhấp vào “Deploy” để lưu các thay đổi và đợi cho đến khi xuất hiện thông báo sau:
 
@@ -98,7 +100,7 @@ Tại thời điểm này, ứng dụng đã được cấu hình để thực h
 18. Truy cập lại API URL trong trình duyệt web của bạn, bạn sẽ thấy dữ liệu mẫu được truy xuất từ cơ sở dữ liệu tương tự như thế này:
 
 Kết quả hiển thị dữ liệu mẫu cũng như Version ID của secret. Khi CloudFormation template được triển khai, secret được cập nhật sau khi nó được tạo lần đầu tiên.
-
+![1.1](/images/m1/1.1/s18.png)
 Bạn có thể quan sát trong code hàm Lambda rằng một lệnh gọi API describe_secret được thực hiện khi kết nối với cơ sở dữ liệu được mở:
 
 *get_describe_secret_response = client.describe_secret(SecretId=secret_name)*

@@ -13,26 +13,30 @@ pre : " <b> Task-1.1: </b> "
 Update Sample Application to retrieve database credentials from AWS Secrets Manager
 
 1. Navigate to the [Lambda service console](https://console.aws.amazon.com/lambda).
-
+![1.1](/images/m1/1.1/s1.png)
 2. Select “Functions” from the left panel. Click on the “LambdaRDSTest” function name. This is the function that is used for the sample application to connect to the RDS Database. The function is written in Python language. The Database contains sample data about First Names and the Last Names.
 
 3. You can review the code for the sample application by double clicking on “LambdaRDSTest.py” in the “Code Source” section.
-
+![1.1](/images/m1/1.1/s3a.png)
 
 
 The function openConnection() within the code connects to the MySQL RDS DB using the parameters that are stored in the Environment Variables. When the Database is connected, application will print the sample data.
-
+![1.1](/images/m1/1.1/s3b.png)
 4. Paste and access the API URL that you copied earlier (in the CloudFormation stack's Event Outputs section) in a separate web browser tab. You should see a Database not connected message
-```
-Why wasn't the application able to connect to the RDS database for retrieving the sample data?
-```
 
+![1.1](/images/m1/1.1/s4.png)
+
+Ques: Why wasn't the application able to connect to the RDS database for retrieving the sample data?
+
+Answer: Because the password has been configured to be used from Amazon Secret Manager
 
 5. Now, let’s update application “LambdaRDSTest” code to retrieve the Database credentials from the Secrets Manager instead of using Environment Variables. Return to the browser tab where the LambdaRDSTest.py code is opened.
 
 a. Comment the following 4 lines in the code (lines number 15, 16, 17, 18) by inserting a # in the beginning of each line as shown below.
 
 b. Under “Configuration” click on “Environment variables”. You will see Environment Variables similar to below:
+
+![1.1](/images/m1/1.1/s5b.png)
 
 c. Delete all the Key Value pairs for the Environment Variables:
 
@@ -42,19 +46,18 @@ c. Delete all the Key Value pairs for the Environment Variables:
 
 7. Click “Deploy” to save the changes and wait until the following message appears:
 
-
+![1.1](/images/m1/1.1/s7.png)
 
 8. Navigate to [Secrets Manager service console](https://console.aws.amazon.com/secretsmanager) .
 
+![1.1](/images/m1/1.1/s8.png)
 
-
-9. Click on the secret that was created by the CloudFormation template. The secret name will be “DemoWorkshopSecret“.
-
-
-
+9. Click on the secret that was created by the CloudFormation template. The secret name will be “DemoWorkshopSecret“.  Check key.
+![1.1](/images/m1/1.1/s9.png)
+![1.1](/images/m1/1.1/s9b.png)
 10. Scroll down to the “Sample code” section. Click on “Python3”
 
-
+![1.1](/images/m1/1.1/s10.png)
 
 11. Select and Copy the code from line # 11 to line # 34.
 
@@ -89,7 +92,7 @@ To use it, you will just need to un-comment the lines (remove # from the start o
 16. Verify that the modified code should be similar to this:
 
 At this point, the application is configured to make a database connection using the retrieved credentials from the secret in AWS Secrets Manager. The pymysql.connect command uses the retrieved credentials from the secret.
-
+![1.1](/images/m1/1.1/s16.png)
 
 17. Click “Deploy” to save the changes and wait until the following message appears:
 
@@ -98,7 +101,7 @@ At this point, the application is configured to make a database connection using
 18. Access the API URL again in your web browser, you should be able to see the sample data retrieved from the database similar to this:
 
 The output displays the sample data as well as Version ID’s of the secret. When the CloudFormation template is deployed, the secret is updated after it’s first created.
-
+![1.1](/images/m1/1.1/s18.png)
 You can observe in the lambda function code that an API call describe_secret is made when the connection to the Database is opened:
 
 *get_describe_secret_response = client.describe_secret(SecretId=secret_name)*

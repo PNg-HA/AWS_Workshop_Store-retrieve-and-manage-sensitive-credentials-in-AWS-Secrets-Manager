@@ -30,7 +30,7 @@ Trong phần này, bạn sẽ xem xét các policy được gắn với role c�
 
 5. Trong phần “Execution Role”, bạn sẽ thấy tên Role “LambdaRDSTestRole” được gắn với hàm Lambda.
 
-
+![1.2](/images/m1/1.2/s5.png)
 
 6. Nhấp vào “LambdaRDSTestRole”. Thao tác này sẽ đưa bạn đến phần Details của Role trong IAM Management Console.
 
@@ -38,13 +38,15 @@ Trong phần này, bạn sẽ xem xét các policy được gắn với role c�
 
 7. Trong Tab Permissions, bạn sẽ thấy 4 chính sách được gắn với Role này.
 
-
+![1.2](/images/m1/1.2/s7.png)
+Xem thử Trust relationships
+![1.2](/images/m1/1.2/s7b.png)
 8. Nhấp vào biểu tượng "+" bên cạnh “AllowSM” policy.
 
-*Bạn rút ra điều gì từ policy này?*
+*Q: Bạn rút ra điều gì từ policy này?*
 
 
-
+A: kiểm tra xem thẻ aws:ResourceTag/Event và aws:ResourceTag/Workshop có khớp với các giá trị tương ứng trong thẻ aws:PrincipalTag/Event và aws:PrincipalTag/Workshop hay không.
 9. Bây giờ hãy xem xét các Tag cho Role này. Điều hướng đến tab “Tags”.
 
 *Bạn nhận thấy các cặp Key-Value nào của Tag?*
@@ -61,20 +63,29 @@ Trong phần này, bạn sẽ xem xét các policy được gắn với role c�
 12. Dưới phần “Tags” cho secret, hãy xem xét Tag Values cho các Tag “Event” và “Workshop” và so sánh Tag Key và Tag Value cho các ”LambdaRDSTestRole“ Tag mà bạn đã xem xét ở bước #10 ở trên.
 
 *Bạn quan sát thấy gì?*
-
+![1.2](/images/m1/1.2/s12.png)
 
 13. Bây giờ nhấp vào “Edit tags” để chỉnh sửa các tag cho “DemoWorkshopSecret” secret. Cập nhật giá trị cho tag “Workshop” thành một giá trị khác (ví dụ: AWSKMSWorkshop).
 
-
+![1.2](/images/m1/1.2/s13.png)
 
 14. Nhấp vào “Save”. Bạn sẽ thấy một thông báo  màu xanh ở trên cùng “Your tags are modified."
 
-
+![1.2](/images/m1/1.2/s14.png)
 
 15. Nếu bạn truy cập lại API URL trong trình duyệt web của mình, bạn sẽ thấy một thông báo “Database not connected” làm đầu ra.
+![1.2](/images/m1/1.2/s15.png)
+*Q: Tại sao kết nối lại thất bại?*
 
-*Tại sao kết nối lại thất bại?*
-
-
+A: fail vì khác value trong tag Workshop (phải là AWSSecretsManagerWorkshop)  
 
 16. Thử nghiệm bằng cách cập nhật các Tag của secret thành một kết hợp các giá trị này và quan sát đầu ra từ API URL của ứng dụng.
+
+![1.2](/images/m1/1.2/s16.png)
+Sửa value tag Workshop thành AmazonGuardDutyWorkshop cũng không kết nối được
+
+![1.2](/images/m1/1.2/s16b.png)
+Sửa value Event thành conference cũng không kết nối database
+
+![1.2](/images/m1/1.2/s16d.png)
+nếu để tag Workshop và Event có value như dưới thì truy vấn database được

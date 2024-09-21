@@ -53,3 +53,19 @@ Access the sample application API URL again and observe the value of the Version
 Note that the AWSCURRENT version becomes the AWSPREVIOUS version.
 
 You can also test application when the secret is scheduled for rotation by clicking “Rotate secret immediately”. Then access the application ApiUrl link after you see the Green success banner on the top of the screen.
+
+Test rotation now:
+.a
+Still fail:
+.b
+Debug: Find out I have chosen the wrong event type:
+.c
+After changing the key to AWSSecretsManagerWorkshopKey:
+,d
+
+Lambda writes log into DynamoDB table:
+.e
+.f
+
+Access the URL. Now the AWSCURRENT version becomes the AWSPREVIOUS version:
+.g

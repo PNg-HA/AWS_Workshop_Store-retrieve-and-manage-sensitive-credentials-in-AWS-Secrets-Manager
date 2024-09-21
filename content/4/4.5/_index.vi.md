@@ -33,7 +33,8 @@ pre : " <b> Nhiệm vụ-2.5: </b> "
 6. Nhấp vào “Save”. Bạn sẽ thấy một thông báo cập nhật thành công màu xanh lá cây ở đầu màn hình.
 
 
-
+Chuyển thành NON_COMPLIANT:
+.b
 7. Bây giờ quay lại Encryption Key cho CMK bí danh "AWSSecretsManagerWorkshopKey". CMK này đã được tạo bởi CloudFormation template trong module-0.
 
 

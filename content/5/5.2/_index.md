@@ -28,8 +28,8 @@ pre : " <b> Task-3.2: </b> "
 4. Try to retrieve the secret value. Click “Retrieve secret value” in the Secret value section.
 
 
-*Are you able to view the secret value? Why or why not?*
-
+*Q: Are you able to view the secret value? Why or why not?*
+A: this policy denies any AWS service or entity from using secretsmanager:GetSecretValue on any resource unless the invoking entity’s ARN matches one of the specified role ARNs.
 
 5. Within the Resource Permissions section, click “Edit Permissions”. Policy update
 
@@ -66,4 +66,14 @@ As a result of this action:
 
 3. Navigate to the secret “DemoWorkshopSecret” again in [Secrets Manager Service console](https://console.aws.amazon.com/secretsmanager). 
 
-*Why do you see the Resource Policy again? Attempt to delete the Resource Policy again, what happens?*
+Different policy appear:
+.p3
+The above policy look likes the policy trong lambda UpdateSecretPolicyLambdaFunction after format:
+.p4
+*Q: Attempt to delete the Resource Policy again, what happens?*\
+A: This resource policy cannot be deleted (updated), because the lambda UpdateSecretPolicyLambdaFunction is triggered, and this user session is assigned the role DenyUpdateSecretPolicy
+
+Review the event DeleteResourcePolicy in Cloudtrail:
+.p5
+.p6
+

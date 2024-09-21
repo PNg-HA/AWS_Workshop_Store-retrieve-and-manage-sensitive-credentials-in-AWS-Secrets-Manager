@@ -32,8 +32,8 @@ pre : " <b> Task-2.5: </b> "
 
 6. Click “Save”. You will see a green banner on top of the screen indicating a successful update.
 
-
-
+Change to NON_COMPLIANT:
+.b
 7. Now revert back to the Encryption Key to the CMK with alias “AWSSecretsManagerWorkshopKey”. This CMK was created by the CloudFormation template in module-0.
 
 
@@ -46,3 +46,4 @@ pre : " <b> Task-2.5: </b> "
 
 
 *Wait for a few minutes and notice the messages in the SNS Portal.*
+.9

@@ -79,3 +79,11 @@ f. Select “Any resource type”. g. Select “Any resource ID”.
 
 
 14. Scroll down and click "Create rule". Once the Rule is created, you will see a Green banner on the top of screen.
+
+Review:
+.a
+Result:
+.b
+View the EventBridge Rule: - Event partern:
+.c
+.d
