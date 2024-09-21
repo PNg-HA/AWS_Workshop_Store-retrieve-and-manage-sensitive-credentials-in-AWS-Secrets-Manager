@@ -3,7 +3,7 @@ title : "Tạo Amazon EventBridge Event Rule"
 date : "`r Sys.Date()`"
 weight : 1
 chapter : false
-pre : " <b> 5.1 </b> "
+pre : " <b> Nhiệm vụ-5.1 </b> "
 ---
 
 **Điều kiện tiên quyết:**

@@ -3,7 +3,7 @@ title : "Create an Amazon EventBridge Event Rule"
 date : "`r Sys.Date()`"
 weight : 1
 chapter : false
-pre : " <b> 5.1 </b> "
+pre : " <b> Task-3.1 </b> "
 ---
 
 **Pre-requisites:**
