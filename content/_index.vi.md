@@ -38,4 +38,4 @@ Buổi workshop này được chia thành phần cài đặt và bốn module:
 - [Module-1: Retrieving secrets and implementing access control for secrets stored in AWS Secrets Manager](3) 
 - [Module-2: Monitor compliance of secrets](4)
 - [Module-3: Automation of Incident Response workflows](5)
-- [Module-4: Recap and summary](6)
+<!-- - [Module-4: Recap and summary](6) -->
