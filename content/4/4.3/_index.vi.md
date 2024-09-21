@@ -15,7 +15,7 @@ pre : " <b> Nhiệm vụ-2.3: </b> "
 
 3. Nhập tên cho Event Rule theo ý của bạn, ví dụ: MonitorSecretsConfig.
 
-
+![m2](/images/m2/2.3/s3.png)
 
 4. Nhấp vào "Next".
 
@@ -30,9 +30,9 @@ a. Dưới mục “Event source”, chọn “AWS services”.
 b. Dưới mục “AWS service”, chọn “Config” từ danh sách.
 
 c. Dưới mục “Event type”, chọn “Config Rules Compliance Change” từ danh sách.
-
+![m2](/images/m2/2.3/s5c.png)
 d. Chọn “Any message type”.
-
+![m2](/images/m2/2.3/s5d.png)
 e. Chọn “Specific rule name(s)” và
 
 - Nhập tên config rule secretsmanager-workshop-scheduled-rotation-success-check vào text-box. Nhấp vào ”Add“.
@@ -44,7 +44,8 @@ e. Chọn “Specific rule name(s)” và
 
 f. Chọn “Any resource type”. 
 g. Chọn “Any resource ID”.
-
+![m2](/images/m2/2.3/5f1.png)
+![m2](/images/m2/2.3/5f2.png)
 
 
 6. Nhấp vào "Next".
@@ -56,6 +57,7 @@ g. Chọn “Any resource ID”.
 
 8. Mở rộng "Additional settings" và chọn "Input transformer" từ menu thả xuống.
 
+![m2](/images/m2/2.3/s8.png)
 
 
 9. Nhấp vào "Configure input transformer".
@@ -66,11 +68,11 @@ g. Chọn “Any resource ID”.
 ```
 {"resource":"$.detail.resourceId","compliance":"$.detail.newEvaluationResult.complianceType","rule":"$.detail.configRuleName","time":"$.detail.newEvaluationResult.resultRecordedTime"}
 ```
-
+![m2](/images/m2/2.3/s10.png)
 11. Dán nội dung sau vào "Template" textbox.
 ```"The compliance state of secret <resource> for rule <rule> has changed to <compliance> at <time>."```
 
-
+![m2](/images/m2/2.3/s11.png)
 12. Nhấp vào "Confirm".
 
 
@@ -82,9 +84,9 @@ g. Chọn “Any resource ID”.
 14. Cuộn xuống và nhấp vào "Create rule". Sau khi Rule được tạo, bạn sẽ thấy một thông báo màu xanh lá cây xuất hiện ở trên cùng của màn hình.
 
 Xem lại:
-.a
+![m2](/images/m2/2.3/s14.png)
 Kết quả:
-.b
+![m2](/images/m2/2.3/s14b.png)
 Xem EventBridge Rule: - Event partern:
-,c
-.d
+![m2](/images/m2/2.3/s14c.png)
+![m2](/images/m2/2.3/s14d.png)

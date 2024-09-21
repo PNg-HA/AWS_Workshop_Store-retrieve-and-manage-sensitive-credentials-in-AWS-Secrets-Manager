@@ -15,6 +15,7 @@ pre : " <b> Task-2.3: </b> "
 
 3. Enter the Name for the Event Rule of your choice, e.g. MonitorSecretsConfig.
 
+![m2](/images/m2/2.3/s3.png)
 
 
 4. Click "Next".
@@ -30,9 +31,9 @@ a. Under “Event source”, select “AWS services”.
 b. Under “AWS service”, choose “Config” from the list.
 
 c. Under “Event type”, choose “Config Rules Compliance Change” from the list.
-
+![m2](/images/m2/2.3/s5c.png)
 d. Select “Any message type”.
-
+![m2](/images/m2/2.3/s5d.png)
 e. Select “Specific rule name(s)” and
 
 - Enter the config rule name secretsmanager-workshop-scheduled-rotation-success-check in the text-box. Click ”Add“.
@@ -43,7 +44,8 @@ e. Select “Specific rule name(s)” and
 
 
 f. Select “Any resource type”. g. Select “Any resource ID”.
-
+![m2](/images/m2/2.3/5f1.png)
+![m2](/images/m2/2.3/5f2.png)
 
 
 6. Click "Next".
@@ -55,7 +57,7 @@ f. Select “Any resource type”. g. Select “Any resource ID”.
 
 8. Expand "Additional settings" and select "Input transformer" under the drop down menu.
 
-
+![m2](/images/m2/2.3/s8.png)
 
 9. Click "Configure input transformer".
 
@@ -65,11 +67,11 @@ f. Select “Any resource type”. g. Select “Any resource ID”.
 ```
 {"resource":"$.detail.resourceId","compliance":"$.detail.newEvaluationResult.complianceType","rule":"$.detail.configRuleName","time":"$.detail.newEvaluationResult.resultRecordedTime"}
 ```
-
+![m2](/images/m2/2.3/s10.png)
 11. Paste the following under "Template" textbox.
 ```"The compliance state of secret <resource> for rule <rule> has changed to <compliance> at <time>."```
 
-
+![m2](/images/m2/2.3/s11.png)
 12. Click "Confirm".
 
 
@@ -81,9 +83,9 @@ f. Select “Any resource type”. g. Select “Any resource ID”.
 14. Scroll down and click "Create rule". Once the Rule is created, you will see a Green banner on the top of screen.
 
 Review:
-.a
+![m2](/images/m2/2.3/s14.png)
 Result:
-.b
+![m2](/images/m2/2.3/s14b.png)
 View the EventBridge Rule: - Event partern:
-.c
-.d
+![m2](/images/m2/2.3/s14c.png)
+![m2](/images/m2/2.3/s14d.png)

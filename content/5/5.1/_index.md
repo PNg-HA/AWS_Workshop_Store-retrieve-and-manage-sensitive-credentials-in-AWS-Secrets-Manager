@@ -20,7 +20,7 @@ pre : " <b> 5.1 </b> "
 
 
 3. Enter the Name for the Event Rule of your choice, e.g. “DeleteSecretResourcePolicyRule”.
-
+![m2](/images/m3/3.1/s3.png)
 
 
 4. Click "Next".
@@ -53,7 +53,7 @@ pre : " <b> 5.1 </b> "
 ```
 
 It should look like:
-
+![m2](/images/m3/3.1/s6.png)
 
 7. Click "Next".
 
@@ -64,10 +64,10 @@ It should look like:
 
 
 9. Select the function named “UpdateSecretPolicyLambdaFunction” and click “Add another target”.
-
+![m2](/images/m3/3.1/s9.png)
 
 10. Choose “SNS topic” from the first drop down list and the name of the SNS topic “ASMWorkshopTopic“ (that you created in Task-2.2) in the second drop down list.
-
+![m2](/images/m3/3.1/s10.png)
 
 
 11. Expand "Additional settings" and select "Input transformer" under the drop down menu.
@@ -100,3 +100,5 @@ It should look like:
 
 
 17. Scroll down and click “Create rule". Once the Rule is created, you will see a green banner at the top of the screen:
+![m2](/images/m3/3.1/s17.png)
+![m2](/images/m3/3.1/s17b.png)

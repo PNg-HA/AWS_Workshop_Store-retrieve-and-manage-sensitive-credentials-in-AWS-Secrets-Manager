@@ -32,7 +32,7 @@ For this workshop, a complimentry SNS notification receiving portal is deployed 
 
 6. Click “Create topic”.
 
-
+![m2](/images/m2/2.2/s6.png)
 
 7. When the Topic is created successfully, you will see a green banner on the top of the screen stating the success message.
 
@@ -50,7 +50,6 @@ For this workshop, a complimentry SNS notification receiving portal is deployed 
 
 ```arn:aws:lambda:[AWS-REGION]:[ACCOUNT-ID]:function:SNSPortalLambdaFunction```
 
-
 **As an example** if you are using us-east-1 region and your Account ID is 111122223333, the ARN will be:
 
 ```arn:aws:lambda:us-east-1:111122223333:function:SNSPortalLambdaFunction```
@@ -60,7 +59,10 @@ You can copy the account number by expanding the drop down menu from the top rig
 
 
 Copy the updated ARN string in the "Endpoint" text box.
+![m2](/images/m2/2.2/s10.png)
 
 11. Click “Create subscription”.
 
 When the Subscription is created successfully, you will see a green banner on the top of the screen stating the success message.
+
+![m2](/images/m2/2.2/s11.png)

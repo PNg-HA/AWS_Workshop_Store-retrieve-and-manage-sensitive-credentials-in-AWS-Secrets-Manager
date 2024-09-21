@@ -21,7 +21,7 @@ pre : " <b> 5.1 </b> "
 
 3. Nhập Tên cho Event Rule theo ý của bạn, ví dụ: “DeleteSecretResourcePolicyRule”.
 
-
+![m2](/images/m3/3.1/s3.png)
 
 4. Nhấp vào "Next".
 
@@ -53,7 +53,7 @@ pre : " <b> 5.1 </b> "
 ```
 
 Nó sẽ trông như thế này:
-
+![m2](/images/m3/3.1/s6.png)
 
 7. Nhấp vào "Next".
 
@@ -64,11 +64,11 @@ Nó sẽ trông như thế này:
 
 
 9. Chọn hàm có tên “UpdateSecretPolicyLambdaFunction” và nhấp vào “Add another target”.
-
+![m2](/images/m3/3.1/s9.png)
 
 10. Chọn “SNS topic” từ danh sách thả xuống đầu tiên và tên của SNS topic “ASMWorkshopTopic“  (bạn đã tạo trong Nhiệm vụ-2.2) trong danh sách thả xuống thứ hai.
 
-
+![m2](/images/m3/3.1/s10.png)
 
 11. Mở rộng "Additional settings" và chọn "Input transformer" từ menu thả xuống.
 
@@ -100,3 +100,5 @@ Nó sẽ trông như thế này:
 
 
 17. Cuộn xuống và nhấp vào “Create rule". Khi Rule được tạo, bạn sẽ thấy một thông báo màu xanh lá cây ở đầu màn hình:
+![m2](/images/m3/3.1/s17.png)
+![m2](/images/m3/3.1/s17b.png)

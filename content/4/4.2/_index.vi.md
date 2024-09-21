@@ -31,7 +31,7 @@ Trong workshop này, một cổng thông báo SNS bổ sung đã được triể
 
 
 6. Nhấp vào “Create topic”.
-
+![m2](/images/m2/2.2/s6.png)
 
 
 7. Khi Topic được tạo thành công, bạn sẽ thấy một thông báo thành công màu xanh ở đầu màn hình.
@@ -60,7 +60,8 @@ Bạn có thể sao chép số tài khoản bằng cách mở rộng menu thả 
 
 
 Sao chép chuỗi ARN đã cập nhật vào ô "Endpoint".
-
+![m2](/images/m2/2.2/s10.png)
 11. Nhấp vào “Create subscription”.
 
 Khi Subscription được tạo thành công, bạn sẽ thấy một thông báo thành công màu xanh ở đầu màn hình.
+![m2](/images/m2/2.2/s11.png)
