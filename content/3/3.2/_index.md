@@ -94,4 +94,4 @@ Changing the Workshop tag value to 'AmazonGuardDutyWorkshop' still doesn't conne
 Changing the Event value to "conference" also does not connect to the database
 
 ![1.2](/images/m1/1.2/s16d.png)
-If the Workshop and Event tags have values ​​as below, the database query will be successful.
+If the Workshop and Event tags have values ​​as above, the database query will be successful.
