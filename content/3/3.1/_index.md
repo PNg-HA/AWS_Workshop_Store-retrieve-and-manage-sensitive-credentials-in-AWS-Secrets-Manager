@@ -162,7 +162,41 @@ Check key.
 10. Scroll down to the “Sample code” section. Click on “Python3”
 
 ![1.1](/images/m1/1.1/s10.png)
+```bash
+# Use this code snippet in your app.
+# If you need more information about configurations
+# or implementing the sample code, visit the AWS docs:
+# https://aws.amazon.com/developer/language/python/
 
+import boto3
+from botocore.exceptions import ClientError
+
+
+def get_secret():
+
+    secret_name = "DemoWorkshopSecret"
+    region_name = "us-east-1"
+
+    # Create a Secrets Manager client
+    session = boto3.session.Session()
+    client = session.client(
+        service_name='secretsmanager',
+        region_name=region_name
+    )
+
+    try:
+        get_secret_value_response = client.get_secret_value(
+            SecretId=secret_name
+        )
+    except ClientError as e:
+        # For a list of exceptions thrown, see
+        # https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html
+        raise e
+
+    secret = get_secret_value_response['SecretString']
+
+    # Your code goes here.
+```
 11. Select and Copy the code from line # 11 to line # 34.
 
 *Note: Python is an indent sensitive language, it’s important to indent the code correctly. Make sure you select the sample code from line # 11, otherwise it can lead to indentation issues.*
