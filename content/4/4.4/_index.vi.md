@@ -3,7 +3,7 @@ title : "Bật chức năng luân phiên Secret"
 date :  "`r Sys.Date()`" 
 weight : 4 
 chapter : false
-pre : " <b> Task-2.4: </b> "
+pre : " <b> Nhiệm vụ-2.4: </b> "
 ---
 
 Trước khi bật chức năng luân phiên Secret:
