@@ -1,45 +1,33 @@
 ---
-title : "Store, retrieve, and manage sensitive credentials in AWS Secrets Manager"
+title : "Strengthen your web application defenses with AWS WAF"
 date :  "`r Sys.Date()`" 
 weight : 1 
 chapter : false
 ---
-# Store, retrieve and manage sensitive credentials in Secrets Manager
-Security Architects are looking to reduce access to plaintext secrets by their application teams. Developers want a mechanism to securely retrieve secrets without hard-coding credentials in their application. They also want assurance that rotation of secrets will not affect application availability. Compliance teams want mechanisms to monitor security of the secrets and aligning with best practices or policy. Finally the SOC want mechanisms to respond to unauthorized or erroneous actions on secrets.
+# Strengthen your web application defenses with AWS WAF
+### Welcome!
+This workshop provides you with the knowledge and skills to strengthen your web application defenses with AWS WAF. You'll gain hands-on experience building an effective set of controls around your web application by learning to:
 
-In this workshop, you will use a sample serverless application with AWS Lambda functions connecting to an Amazon RDS database. You will test programmatic retrieval of database credentials from AWS Secrets Manager as well as implement Attribute-based Access Control (ABAC) using tags. You will monitor compliance status of secrets using AWS Config. Later you will rotate secrets within AWS Secrets Manager and test application access. Finally you will test attempts to delete the secrets resource policy for retrieving secrets in plaintext from AWS Secrets Manager. Attendees will use AWS Event Bridge event driven response to deploy incident response workflows that will rotate the secret, restore the resource policy, alert the SOC, and deny access to the offender.
+- Mitigate common threats: Understand and implement controls to counter frequent web attacks like SQL injection and cross-site scripting.
+- Leverage advanced techniques: Explore advanced capabilities, including Bot Control, custom HTTP responses, and JSON inspection.
+- Monitor web traffic: Analyze traffic by learning how to use AWS WAF logs, build near-real time dashboards and gain insights to further optimize your security posture.
 
-### Scenario
+### About the workshop
+This is a 300-level workshop aimed at IT professionals who are already familiar with core AWS services, and are looking to better understand AWS WAF and its capabilities.
 
-
-You are working at a company who is moving towards storing their credentials in AWS Secrets Manager. Rather than applications using hard-coded credentials, developers will use Secrets Manager to retrieve the Database credentials for connecting to the database.
-
-We will assume that the organization's security requirements state:
-
-- All secrets must be encrypted at rest using Customer Managed Keys
-- All secret modification or retrieval attempts by unauthorized users must notify Admins and SOC.
-- Trigger incident response automation to rotate the secret and reduce unauthorized user's privilege profile.
-  
-![architecture](/images/asm-workshop-architecture.png)
-
-In this workshop, you will wear two hats. First, you will wear the Administrator hat to deploy the configuration to manage the secrets stored in Secrets Manager. Second, you will wear the Developer hat to configure your application for requesting database credentials from Secrets Manager instead of using hard-coded credentials. You will also test the Incident Response configuration that you put in place for remediating against Secret update and retrieval workflow.
-
-The sample application is a Lambda function “LambdaRDSTest” which is initially using Hard-coded environment variables to connect with the Demo MySQL RDS DB Instance.
-
-You will use the secret created in AWS Secrets Manager in your sample application to retrieve the DB credentials from AWS Secrets Manager instead of using Hard-coded Environment variables.
-
-You will also create an automated workflow for Detecting, Alerting and Responding to secret policy deletion and compliance changes for secrets in AWS Secrets Manager.
+The expected workshop duration is approximately 2 hours.
 
 ### Modules
 This workshop is broken up into setup and then four modules:
 
-- [Introduction](1-Instructions/)
-- [Module-0: Environment Setup](2/)
-- [Module-1: Retrieving secrets and implementing access control for secrets stored in AWS Secrets Manager](3) 
-- [Module-2: Monitor compliance of secrets](4)
-- [Module-3: Automation of Incident Response workflows](5)
-<!-- - [Module-4: Recap and summary](6) -->
+- [Introduction](1-Introduction/)
+- [Preparation](2-Preparation/)
+- [Remediate](3-Remediate/)
+- [Monitor](4-Monitor) 
+- [Optional](5-Optional)
+- [Clean Up](6-Clean-up)
 
-{{% notice info %}}
+
+<!-- {{% notice info %}}
 This workshop is created from AWS workshop’s accounts (including setting up RDS, Lambda functions). You can do this workshop by register to AWS Activation Day “Secrets Management” at https://awsactivationdays.splashthat.com/.
-{{% /notice %}}
+{{% /notice %}} -->
