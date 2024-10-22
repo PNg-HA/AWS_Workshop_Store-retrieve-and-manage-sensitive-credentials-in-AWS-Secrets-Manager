@@ -88,4 +88,4 @@ Sửa value tag Workshop thành AmazonGuardDutyWorkshop cũng không kết nối
 Sửa value Event thành conference cũng không kết nối database
 
 ![1.2](/images/m1/1.2/s16d.png)
-nếu để tag Workshop và Event có value như dưới thì truy vấn database được
+nếu để tag Workshop và Event có value như trên thì truy vấn database được
