@@ -18,7 +18,7 @@ home = [ "HTML", "RSS", "JSON"]
   
 [Languages]
 [Languages.en]
-title = "AWS WAF"
+title = "AWS System Manager"
 weight = 1
 languageName = "English"
 
@@ -29,7 +29,7 @@ url = "https://www.facebook.com/groups/awsstudygroupfcj/"
 weight = 20
 
 [Languages.vi]
-title = "AWS WAF"
+title = "AWS System Manager"
 weight = 2
 languageName = "Tiếng Việt"
 
